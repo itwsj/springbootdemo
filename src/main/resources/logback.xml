@@ -24,10 +24,10 @@
         </filter>
     </appender>
 
-    <logger name="com.wsj" level="INFO" />
+    <logger name="com.wsj" level="DEBUG" />
 
     <root>
-        <level value="INFO" />
+        <level value="DEBUG" />
         <appender-ref ref="fileAppender" />
         <appender-ref ref="consoleAppender" />
     </root>
