@@ -1,9 +1,13 @@
 package com.wsj.springbootdemo.controller;
 
+import com.wsj.springbootdemo.bean.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
 
 
 /**
@@ -22,6 +26,18 @@ public class IndexController {
     @RequestMapping("/index")
     public String index(){
         logger.info("哈哈哈哈哈");
+
         return "hello word";
+    }
+    @RequestMapping("/thymeleaf")
+    public ModelAndView thymeleaf(HttpServletRequest req){
+
+        User user = new User();
+        user.setName("wsj");
+        user.setAge(100);
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("user", user);
+        mv.setViewName("/user/user.html");
+        return mv;
     }
 }
