@@ -3,7 +3,9 @@ package com.wsj.springbootdemo.controller;
 import com.wsj.springbootdemo.bean.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -23,6 +25,8 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 @RequestMapping("/wsj")
 public class IndexController {
+
+
     Logger logger = LoggerFactory.getLogger(IndexController.class);
     @RequestMapping("/index")
     public String index(){
