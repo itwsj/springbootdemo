@@ -14,6 +14,10 @@
         <td th:text="${user.name}"></td>
         <td th:text="${user.age}"></td>
     </tr>
+    <form method="POST" enctype="multipart/form-data" action="/file/upload">
+        文件：<input type="file" name="wsjFile" />
+        <input type="submit" value="上传" />
+    </form>
 </table>
 </body>
 </html>
