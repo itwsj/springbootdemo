@@ -1,5 +1,6 @@
 package com.wsj.springbootdemo.controller;
 
+import com.wsj.springbootdemo.component.WsjRedisComponent;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
