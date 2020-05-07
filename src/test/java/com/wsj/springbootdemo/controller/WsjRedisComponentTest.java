@@ -9,6 +9,7 @@ class WsjRedisComponentTest {
 
     @Autowired
     private WsjRedisComponent wsjRedisComponent;
+
     @Test
     public void set() {
         wsjRedisComponent.set("wsj", "hello world");
