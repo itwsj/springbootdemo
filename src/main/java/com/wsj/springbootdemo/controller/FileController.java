@@ -1,5 +1,7 @@
 package com.wsj.springbootdemo.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -20,11 +22,13 @@ import java.io.IOException;
  *
  * @version：1.0
  **/
+@Api(value = "文件上传接口}", tags = "{文件上传接口}")
 @Controller
 @RequestMapping(value = "/file")
 public class FileController {
     private static final Logger logger = LoggerFactory.getLogger(FileController.class);
 
+    @ApiOperation(value = "文件上传", notes = "文件上传")
     @RequestMapping(value = "upload")
     @ResponseBody
     public String upload(@RequestParam("wsjFile") MultipartFile file) {
